@@ -1,0 +1,11 @@
+#addButton{
+   margin:auto;
+}
+
+input.ng-touched.ng-invalid{
+   border: 1px solid red;
+}
+
+/* input.ng-touched.ng-valid{
+   border: 1px solid rgb(32, 228, 38);
+} */
