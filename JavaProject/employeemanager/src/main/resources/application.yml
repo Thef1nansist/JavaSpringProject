@@ -1,0 +1,97 @@
+#    http://localhost:8081/v3/api-docs/
+#    http://localhost:8081/v3/api-docs.yaml/
+#    http://localhost:8080/swagger-ui.html
+server:
+    port: 8081
+    error:
+        include-message: always
+        include-binding-errors: always
+
+spring:
+    datasource:
+        password: root
+        url: jdbc:mysql://localhost:3306/javadbproga
+        username: root
+    jpa:
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQL5Dialect
+                format_sql: true
+        show-sql: true
+#    mail:
+#        username: krauchankamikita@gmail.com
+#        password:
+#        port: 587
+#        host: smtp.gmail.com
+#        properties:
+#            mail:
+#                transport:
+#                    protocol: smtp
+#                smtp:
+#                    auth: true
+#                    starttls:
+#                        enable: true
+
+    # Mail Sender properties
+
+    mail:
+        host: localhost
+        port: 1025
+        username: krauchankamikita@gmail.com
+        password: 1234
+
+        properties:
+            mail:
+                smtp:
+                    ssl:
+                        trust: "*"
+                    auth: true
+                    starttls:
+                        enable: true
+                    connectiontimeout: 5000
+                    timeout: 3000
+                    writetimeout: 5000
+
+
+
+
+# App Properties
+
+security:
+    jwt:
+        token:
+            secret-key: secret-key
+            expire-length: 86400000
+
+
+
+
+
+
+
+
+# DB Configuration
+#    spring.datasource.url = jdbc:mysql://localhost:3306/employeemanager?allowPublicKeyRetrieval=true&useSSL=false
+#    spring.datasource.username= root
+#    spring.datasource.password= root
+#    spring.jpa.show-sql= true
+#    spring.jpa.hibernate.ddl-auto=update
+#    spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
+#
+#    server.port = 8081
+
+
+
+
+
+
+
+
+
+
+
+
+
+

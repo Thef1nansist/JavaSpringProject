@@ -1,0 +1,48 @@
+<div *ngIf="isLoggedIn; else loggedOut" id="LoggedInAssDiv">
+    Role:   {{roles}}
+    <br>
+    Token:  {{info.token}}
+    <br>
+      <div *ngIf="roleAdmin">
+        <button (click)="functionRedirectAdmin()" class="btn btn-primary">Go to page Admin</button> 
+      </div>
+      <div *ngIf="roleUser">
+        <button (click)="functionRedirectUser()" class="btn btn-primary">Go to page User</button>  
+      </div>
+          <div id="DivLogout">
+          <button class="btn btn-danger" (click)="logout()">Logout</button>
+          </div>
+  </div>
+   
+  <ng-template #loggedOut>
+    <div id="formSignUp" class="row col-sm-6" style="max-width:350px;">
+      <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text" class="form-control" name="email" [(ngModel)]="form.email" #email="ngModel"
+            required />
+          <div *ngIf="f.submitted && email.invalid">
+            <div *ngIf="email.errors.required">Email is required</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" name="password" [(ngModel)]="form.password" #password="ngModel"
+            required minlength="1" />
+          <div *ngIf="f.submitted && password.invalid">
+            <div *ngIf="password.errors.required">Password is required</div>
+            <div *ngIf="password.errors.minlength">Password must be at least 1 characters</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary">Login</button>
+          <div *ngIf="f.submitted && isLoginFailed" class="alert alert-danger">
+            Login failed: {{errorMessage}}
+          </div>
+        </div>
+      </form>
+      <hr />
+      <p>Don't have an account?</p>
+      <a href="signup" class="btn btn-success">Sign Up</a>
+    </div>
+  </ng-template>
