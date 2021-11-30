@@ -11,8 +11,8 @@
 	<groupId>com.courseproj</groupId>
 	<artifactId>employeemanager</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>employeemanager</name>
-	<description>Employee Manager App</description>
+	<name>companymanager</name>
+	<description>Company Manager App</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
