@@ -7,28 +7,27 @@ import { NgForm } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
- selector: 'navbar',
- templateUrl: './navbar.component.html',
- styleUrls: ['./navbar.component.css'],
+  selector: 'navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.css'],
   //template:``
 
 })
 export class NavComponent implements OnInit {
 
-  
+
   public employees: Employee[];
   public editEmployee: Employee;
   public deleteEmployee: Employee;
-  filterText ='';
+  filterText = '';
 
 
-  constructor(private employeeService: EmployeeService){}
+  constructor(private employeeService: EmployeeService) { }
 
 
   ngOnInit() {
-    
+
   }
 
 
-  }
-  
+}

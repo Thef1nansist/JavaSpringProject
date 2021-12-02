@@ -9,9 +9,9 @@ a {
   cursor: pointer;
 }
 
- .navbar {
+.navbar {
   margin-bottom: 0px;
-} 
+}
 
 .card {
   border: none;
@@ -50,19 +50,20 @@ h6 {
 a {
   color: #707070;
 }
+
 i {
-color: white;
+  color: white;
 }
 
 a {
-color: white;
+  color: white;
 }
 
-#filterByName{
+#filterByName {
   margin-right: 5px;
 }
 
-#filterById{
+#filterById {
   margin-right: 5px;
 }
 
