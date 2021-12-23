@@ -20,26 +20,13 @@ spring:
                 dialect: org.hibernate.dialect.MySQL5Dialect
                 format_sql: true
         show-sql: true
-#    mail:
-#        username: krauchankamikita@gmail.com
-#        password:
-#        port: 587
-#        host: smtp.gmail.com
-#        properties:
-#            mail:
-#                transport:
-#                    protocol: smtp
-#                smtp:
-#                    auth: true
-#                    starttls:
-#                        enable: true
 
     # Mail Sender properties
 
     mail:
         host: localhost
         port: 1025
-        username: krauchankamikita@gmail.com
+        username: vladsavchenko@gmail.com
         password: 1234
 
         properties:
